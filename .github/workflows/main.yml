@@ -3,7 +3,7 @@ name: Create Test Environment
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   create-infra:
