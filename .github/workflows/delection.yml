@@ -2,7 +2,7 @@ name: Remove Test Environment
 on:
   pull_request:
     branches:
-      - master
+      - main
     types: [closed]
 jobs:
   delete-infra:
