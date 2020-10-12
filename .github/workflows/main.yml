@@ -32,8 +32,7 @@ jobs:
       - uses: actions/cache@v1
         with:
           path: ~/.cache/yarn
-          key: ${{ runner.os }}-yarn-${{ hashFiles(format('{0}{1}', 
-          github.workspace, '/yarn.lock')) }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Install dependencies
@@ -54,8 +53,7 @@ jobs:
         id: deployment
         with:
           token: '${{ github.token }}'
-          target_url: http://acid-web-${{ github.head_ref }}.s3-website-eu-
-          west-1.amazonaws.com
+          target_url: http://acid-web-${{ github.head_ref }}.s3-website-eu-west-1.amazonaws.com
           environment: ${{ github.head_ref }}
           initial_status: success
           ref: ${{ github.event.pull_request.head.sha }}
