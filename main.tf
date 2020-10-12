@@ -4,8 +4,8 @@ terraform {
   required_version = ">= 0.12.24"
 
   backend "s3" {
-    bucket = "example-bucket"
-    key    = "example-key"
+    bucket = "testing-123-2"
+    key    = "testing-123-2"
     region = "eu-west-1"
   }
 }
